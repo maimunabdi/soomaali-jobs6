@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+       #myelement{
+        width: 100px;
+        height: 100px;
+        color: white;
+        background-color: black;
+       } 
+
+        .focused{
+            color: green;
+        }
+        .blurred{
+            color: red;
+        }
+        .valid{
+            color: green;
+        }
+        .invalid{
+            color: red;
+        }
+ul{
+    cursor: pointer;
+}
+li{
+    display:inline-block;
+    margin-right: 10px;
+    padding: 5px;
+    background-color: #eee;
+}
+li:hover{
+    background-color: #ddd;
+}
+    </style>
+</head>
+<body>
+
+    <div id="div" >
+  
+        <a href="../HTML/index.html">home</a>
+        <a href="./chapters.html">chapters</a>
+        <a href="./assignment.html">assignment</a>
+        <a href="./lab.html">lab</a>
+        <a href="./about me page.html">About me</a>
+      
+        </div>
+    <ul id="parentlist">
+        <li>1tem1</li>
+        <li>1tem2</li>
+        <li>1tem3</li>
+        <li>1tem4</li>
+    </ul>
+    <button id="mybutton"> click me!</button>
+   
+
+
+    <div id="myelement"> hover over me</div>
+<!---keys-->
+    <input type="text" id="textinput" placeholder="type somthing">
+  
+    <!---focud,blure-->
+    <div id="outputfb"></div>
+    <input type="text" id="focudtinput" placeholder="type somthing">
+   
+
+    <!-- form-->
+
+    <form id="myform">
+        <input type="text" id="forminput" placeholder="type somthing">
+<button type="submit"> submit</button>
+    </form>
+    <div id="outputform"></div>
+
+
+  
+        <script src="./mainn.js">
+            
+///cjapter7
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Handle button click with id and event listener
+function id_onclik(){
+    const element = document.getElementById("mybutton");
+    element.addEventListener("click", myfunction);
+
+    function myfunction() {
+      alert("Button click using id");
+    }
+  
+
+
+}
+  // Mouseover and mouseout effects on element
+  function mouse() {
+    const element2 = document.getElementById("myelement");
+    element2.addEventListener("mouseover", function () {
+      element2.style.background = "green";
+    });
+    element2.addEventListener("mouseout", function () {
+      element2.style.background = "blue";
+    });
+  }
+
+  // Handle key events
+  function key() {
+    const textinput = document.getElementById("textinput");
+    const outputdiv = document.getElementById("output");
+
+    textinput.addEventListener("keydown", function (event) {
+      outputdiv.innerText = `keydown: ${event.key}`;
+    });
+
+    textinput.addEventListener("keypress", function (event) {
+      outputdiv.innerText += `\nkeypress: ${event.key}`;
+    });
+
+    textinput.addEventListener("keyup", function (event) {
+      outputdiv.innerText += `\nkeyup: ${event.key}`;
+    });
+  }
+
+  // Handle focus and blur events
+  function foc_blu() {
+    const focudtinput = document.getElementById("focudtinput");
+    const outputfb = document.getElementById("outputfb");
+
+    focudtinput.addEventListener("focus", function () {
+      updateoutput("Element focused", "focused");
+    });
+
+    focudtinput.addEventListener("blur", function () {
+      updateoutput("Element blurred", "blurred");
+    });
+
+    function updateoutput(message, classname) {
+      outputfb.innerText = message;
+      outputfb.className = classname;
+    }
+  }
+
+  // Handle form submission and dynamic input change validation
+  function form() {
+    const forminput = document.getElementById("forminput");
+    const outputform = document.getElementById("outputform");
+    const myform = document.getElementById("myform");
+
+    forminput.addEventListener("input", function () {
+      if (forminput.value !== "") {
+        updateoutput("Input changed!", "valid");
+      } else {
+        updateoutput("Input changed with empty", "invalid");
+      }
+    });
+
+    myform.addEventListener("submit", function (event) {
+      event.preventDefault();
+      updateoutput("Form submitted", "valid");
+    });
+
+    function updateoutput(message, classname) {
+      outputform.innerText = message;
+      outputform.className = classname;
+    }
+  }
+
+  // List click event delegation
+  function  delegation(){
+    const parentlist = document.getElementById("parentlist");
+
+    parentlist.addEventListener("click", function (event) {
+      if (event.target.tagName === "LI") {
+        alert("Clicked on: " + event.target.innerText);
+      }
+    });
+  }
+
+  // Call the functions to bind event listeners
+
+  id_onclik()
+  mouse()
+  key()
+  foc_blu()
+  form()
+  delegation()
+});
+
+
+        </script>
+    <div id="div">
+        <footer>
+            <a href="../HTML/index.html">home</a>
+          <a href="./chapters.html">chapters</a>
+          <a href="./assignment.html">assignment</a>
+          <a href="./lab.html">lab</a>
+          <a href="./about me page.html">About me</a>
+        </footer>
+      </div>
+</body>
+</html>

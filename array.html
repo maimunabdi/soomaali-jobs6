@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <div id="div">
+    <a href="../HTML/index.html">Home</a>
+    <a href="./chapters.html">Chapters</a>
+    <a href="./assignment.html">Assignment</a>
+    <a href="./lab.html">Lab</a>
+    <a href="./about me page.html">About Me</a>
+  </div>
+
+  <!-- Main Content -->
+  <div id="ch5">
+    <a href="../HTML/array.html">Array</a>
+    <a href="../HTML/object.html">Object</a>
+    <a href="./json.html">JSON</a>
+    <br><br>
+  </div>
+
+
+  <main id="menu">
+    <div id="outputContainer"></div>
+
+    <button onclick="literalArray()">Literal Array</button>
+    <button onclick="constructorArray()">Constructor Array</button>
+    <button onclick="arrayFromExample()">Array.from()</button>
+    <button onclick="arrayOfExample()">Array.of()</button>
+    <button onclick="spreadOperatorExample()">Spread Operator</button>
+    <button onclick="mapExample()">Map Example</button>
+    <button onclick="filterExample()">Filter Example</button>
+    <button onclick="reduceExample()">Reduce Example</button>
+    <button onclick="everyExample()">Every Example</button>
+    <button onclick="someExample()">Some Example</button>
+  </main>
+
+
+
+  
+  <!-- Footer -->
+  <div id="div">
+    <footer>
+      <a href="./index.html">Home</a>
+      <a href="./chapters.html">Chapters</a>
+      <a href="./assignment.html">Assignment</a>
+      <a href="./lab.html">Lab</a>
+      <a href="./about me page.html">About Me</a>
+    </footer>
+  </div>
+  <script>
+ 
+    const button = document.getElementById('navigate-button');
+  
+  
+  
+    button.addEventListener('click', function () {
+    
+      window.location.href = './chapter2.html';
+    });
+    </script>
+
+  <!-- JavaScript -->
+  <script src="./mainn.js"></script>
+    
+  </script>
+</body>
+</html>

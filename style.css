@@ -1,0 +1,157 @@
+
+
+img {
+    display: block; /* Ensures the image behaves like a block element */
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 20%;
+
+  }
+
+
+  #navigate-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between text and arrow */
+    position: relative;
+  }
+
+  /* Arrow on the side */
+  #navigate-button::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 12px solid white; /* Falaar dhinac bidix */
+    position: absolute;
+    right: 10px; /* Arrow position */
+  }
+
+  #navigate-button:hover {
+    background-color: #0056b3;
+  }
+
+
+
+  /* General page styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#div {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Navbar Styles */
+#div a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    margin: 0 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#div a:hover {
+    background-color: #45a049;
+}
+
+/* Chapter Menu Styles */
+#ch5 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#ch5 a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 12px;
+    margin: 0 8px;
+    font-size: 18px;
+    background-color: #fad398;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#ch5 a:hover {
+    background-color: #f5d5b6;
+}
+
+/* Main Content Styles */
+#chapter123 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 40px;
+    color: #333;
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #333;
+}
+
+footer a {
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    background-color: #555;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #div, #ch5, footer {
+        text-align: left;
+        padding-left: 20px;
+    }
+    
+    #div a, #ch5 a, footer a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

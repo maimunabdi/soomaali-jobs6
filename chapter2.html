@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Example with Dynamic Content</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>   /* Style for the arrow button */
+    #navigate-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px; /* Space between text and arrow */
+      position: relative;
+    }
+
+    /* Arrow on the side */
+    #navigate-button::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-left: 12px solid white; /* Falaar dhinac bidix */
+      position: absolute;
+      right: 10px; /* Arrow position */
+    }
+
+    #navigate-button:hover {
+      background-color: #0056b3;
+    }
+    </style>
+</head>
+<div id="div">
+
+        <a href="../HTML/index.html">home</a>
+      <a href="./chapters.html">chapters</a>
+      <a href="./assignment.html">assignment</a>
+      <a href="./lab.html">lab</a>
+      <a href="./about me page.html">About me</a>
+
+</div>
+<body>
+ 
+  <div id="ch5">
+ 
+    <a href="./companison.html"> companison</a>
+    <a href="arithamtic.html"> arithamtic</a>
+    <a href="./logic.html">logic</a>
+
+
+
+ <button id="navigate-button" style="padding: 10px 20px; font-size: 16px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
+ 
+</button>
+
+<script>
+ 
+  const button = document.getElementById('navigate-button');
+
+
+
+  button.addEventListener('click', function () {
+  
+    window.location.href = './chapters.html';
+  });
+</script>
+<script src="./mainn.js"></script>
+
+</script>
+
+  </script>
+  <div id="div">
+    <footer>
+        <a href="../HTML/index.html">home</a>
+      <a href="./chapters.html">chapters</a>
+      <a href="./assignment.html">assignment</a>
+      <a href="./lab.html">lab</a>
+      <a href="./about me page.html">About me</a></footer>
+  </div>
+</body>
+</html>
